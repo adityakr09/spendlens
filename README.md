@@ -6,15 +6,18 @@ SpendLens is a free web app for startup founders and engineering managers to aud
 
 ---
 
+
 ## Screenshots
 
-> _Add 3+ screenshots or a Loom/YouTube link here before submitting._
->
-> Suggested shots:
-> 1. Landing page hero
-> 2. Audit form with tools enabled
-> 3. Results page showing savings hero + per-tool breakdown + Credex CTA
+| Landing Page | Audit Form |
+|---|---|
+| ![Landing](landing.png) | ![Audit Form](audit.png) |
 
+| Results Page | How It Works |
+|---|---|
+| ![Results](results.png) | ![How It Works](how.png) |
+
+**Live Demo:** https://spendlens-mocha.vercel.app
 ---
 
 ## Quick start
