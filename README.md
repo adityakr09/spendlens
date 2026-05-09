@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0f5cf5,0f1b35&height=200&section=header&text=💸%20SpendLens&fontSize=60&fontColor=ffffff&fontAlignY=38&desc=Free%20AI%20Tool%20Spend%20Audit%20for%20Startups&descAlignY=58&descColor=rgba(255,255,255,0.8)" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0f5cf5,0f1b35&height=200&section=header&text=💸%20SpendLens&fontSize=60&fontColor=ffffff&fontAlignY=38&desc=Free%20AI%20Tool%20Spend%20Audit%20for%20Startups&descAlignY=58&desc&color=0f5cf5,6b21a8" width="100%"/>
 
 <br/>
 
