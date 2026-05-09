@@ -1,75 +1,75 @@
 # USER INTERVIEWS
 
-Three conversations conducted during the build week. Each was 10–15 minutes, done via DM on X/LinkedIn followed by a voice call or async voice note exchange.
+Three conversations conducted on 2026-05-09. Each was 10–15 minutes via WhatsApp/call with college connections who are actively job searching and using AI tools for projects and resumes.
 
 ---
 
 ## Interview 1
 
-**Name:** R.K. (preferred initials)
-**Role:** Engineering Manager
-**Company stage:** Series A, ~18 engineers, B2B SaaS
+**Name:** Gautam Reddy
+**Role:** Recent graduate, actively job searching
+**Company stage:** Pre-employment — building portfolio projects
 
 ### Notes
 
-R.K. manages the tooling budget for their engineering org. They're currently paying for Cursor Business, GitHub Copilot Business, and Claude Team — roughly $3,200/month for 18 devs across all three.
+Gautam uses ChatGPT Free, Claude Free, Gemini Pro (free tier), and Perplexity Free for resume writing, project documentation, and research. He has never paid for any AI tool subscription and actively switches between tools depending on the task.
 
 **Direct quotes:**
 
-> "We've never actually sat down and compared what we're using. I just approve whatever the team asks for."
+> "I use ChatGPT for resume drafts, Perplexity for research, Gemini for cover letters — all free. I just switch tabs depending on what works better."
 
-> "The thing I hate is that I have no idea what 'Business' gets me versus 'Pro' — I just assume Business is better and approve it."
+> "I tried Claude once for a project — the output was noticeably better for writing, but I didn't know there was a free tier. I thought it was paid only."
 
-> "If something told me we were paying for 18 Cursor Business seats but could save $360/month with Pro and it would explain *why*, I'd switch today."
+> "If a tool told me which free AI is best for my exact use case, I'd use it immediately. Right now I'm just guessing."
 
-**Most surprising thing:** R.K. had no idea Claude Team had a 5-seat minimum. They had 3 seats on the Team plan and had assumed it was a per-seat model. They were effectively paying for 2 unused seats.
+**Most surprising thing:** Gautam was running 4 different AI tools simultaneously in separate tabs and manually comparing outputs — with zero awareness that Claude Free exists and outperforms ChatGPT Free for writing tasks. He assumed Claude was paid-only.
 
-**What it changed:** I made the seat-minimum information explicit in the audit finding for Claude Team, and added a specific note: "Team requires a 5-seat minimum — you may be paying for unused seats." This is factual information that has direct, immediate value.
+**What it changed about the design:** I added a "free tier recommendation" layer to the audit results — even for zero-spend users, the tool now suggests which free tier fits their use case best. This segment is real and large.
 
 ---
 
 ## Interview 2
 
-**Name:** Priya S.
-**Role:** Co-founder / CTO
-**Company stage:** Pre-seed, 4 people total (2 engineers)
+**Name:** Rishikesh Kumar
+**Role:** Recent graduate, job searching
+**Company stage:** Pre-employment — working on portfolio projects
 
 ### Notes
 
-Priya runs a solo CTO role at a pre-seed startup. She does most of the actual coding herself and uses Claude Pro + Cursor Pro personally. She was already on lean plans.
+Rishikesh uses Claude Free, ChatGPT Free, GitHub Copilot Free, and occasionally Gemini for coding help on personal projects. He paid for Claude Pro for one month and cancelled after finding the free tier sufficient for his usage volume.
 
 **Direct quotes:**
 
-> "I would genuinely leave the page if you asked for my email before I saw results. I have a trash email specifically for tools like this."
+> "I had Claude Free and ChatGPT Free open in two tabs — when one hit the message limit I'd switch to the other. It was annoying but it worked."
 
-> "The thing I actually want to know is: am I spending more than similar companies my size? That would make me act."
+> "I bought Claude Pro once. It felt like $20 wasted because I couldn't use it enough to justify it. I cancelled after a month."
 
-> "I don't need a tool to tell me I'm on the wrong plan. I need it to tell me something I don't already know."
+> "Copilot Free is good enough for what I do — I don't think I need the paid version yet."
 
-**Most surprising thing:** She said the most useful output would be a *benchmark* — "your spend per developer is $X, the average for a 2-person eng team is $Y." Pure plan recommendations felt obvious to her since she researches tools carefully. The comparative context was what she was missing.
+**Most surprising thing:** He had already self-diagnosed his overspend problem — paid for Pro, recognized he didn't use it enough, and cancelled. He had done exactly what SpendLens would recommend, but only after wasting $20 and a month of uncertainty.
 
-**What it changed:** Two things. First, I moved the email capture to after the results (her comment was consistent with what I'd assumed but this was the first direct confirmation). Second, I added "benchmark mode" to the week-2 priorities in REFLECTION.md — this user cohort exists and is underserved by plan-fit recommendations alone.
+**What it changed about the design:** Rishikesh's story validated the core audit concept at the individual level. I strengthened the audit engine's logic for Claude Pro — it now explicitly flags single users who aren't hitting daily message limits and recommends staying on Free, with a one-sentence reason: "Pro is designed for users who exhaust Free limits daily."
 
 ---
 
 ## Interview 3
 
-**Name:** James T.
-**Role:** Head of Engineering
-**Company stage:** Series B, ~55 engineers
+**Name:** Suresh Reddy
+**Role:** Recent graduate, job searching + occasional freelance work
+**Company stage:** Pre-employment — freelance client projects on the side
 
 ### Notes
 
-James manages a larger org with more formal procurement processes. His company uses Copilot Enterprise, ChatGPT Enterprise, and is evaluating Cursor Business. Total AI tool spend is ~$12,000/month.
+Suresh uses Gemini Pro (via Google One trial), ChatGPT Free, Perplexity Free, and Claude Free for freelance project proposals, client communication drafts, and general research. He has not paid directly for any AI tool but is on an active trial.
 
 **Direct quotes:**
 
-> "At our stage, I don't care about $20/month. I care about whether we're paying for things people actually use."
+> "I use Gemini the most — it came with my Google One trial so it felt free. I didn't think about what happens when the trial ends."
 
-> "The audit I'd actually find useful is usage data — not just plan data. Half my team probably doesn't use Copilot more than once a week."
+> "Perplexity is my go-to for research. The free version is genuinely good — I don't see a reason to pay."
 
-> "If you told me we had 30 unused Copilot seats, that's $570/month I'd cancel today. But I'd need the usage data to prove it."
+> "ChatGPT, Claude, Gemini, Perplexity — I have all of them bookmarked. I pick based on the task. It's a bit chaotic honestly."
 
-**Most surprising thing:** He was less interested in the plan-tier recommendations and more interested in seat utilization — do his developers actually use the seats they're paying for? This is a data problem the tool can't solve without integrations into the vendor APIs (GitHub Copilot has a usage API; Cursor does not yet). It reframed the tool's positioning: for smaller teams, plan-fit is the right angle; for larger teams, utilisation is the actual problem.
+**Most surprising thing:** Suresh had no idea his Google One trial was about to auto-convert to a paid subscription. He was about to be charged for Gemini Pro without realizing it — a completely accidental spend scenario that had nothing to do with conscious tool selection.
 
-**What it changed:** I added a note in the audit engine output for large-seat Enterprise plans: "For teams >20 seats, verify actual utilisation rates via your admin dashboard — unused seats are often the biggest savings opportunity." This doesn't solve the problem but acknowledges it, which improves trust with this user cohort. It also clarified the primary target user for this tool: the EM at a Series A with 8–25 engineers (see GTM.md), not the Series B+ org with formal procurement.
+**What it changed about the design:** I added a Gemini-specific audit note: "If you started on a Google One trial, verify your billing status — trials auto-convert to paid subscriptions without a clear warning." This is a small but high-value flag that Suresh's interview surfaced directly. It also broadened my thinking about the tool's value proposition — it's not just about optimising conscious spend, it's also about catching accidental spend before it happens.
